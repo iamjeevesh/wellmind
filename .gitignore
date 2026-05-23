@@ -1,0 +1,59 @@
+# ========================
+# WellMind .gitignore
+# ========================
+
+# ---- Environment Files (NEVER commit these!) ----
+.env
+.env.local
+.env.production
+.env.*.local
+*.env
+
+# ---- Python / Backend ----
+venv/
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+*.log
+.pytest_cache/
+.mypy_cache/
+
+# ---- Node.js / Frontend ----
+node_modules/
+.next/
+out/
+.npm
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ---- OS Files ----
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# ---- IDE Files ----
+.vscode/settings.json
+.idea/
+*.swp
+*.swo
+
+# ---- Database ----
+*.sqlite
+*.db
+
+# ---- Build outputs ----
+*.pyc
+dist/
+build/
