@@ -1,6 +1,6 @@
 # ai/wellness_ai.py
 # Handles all AI interactions — the brain of WellMind
-# Uses OpenAI's API with a carefully crafted wellness-focused system prompt
+# Uses Groq's API with a carefully crafted wellness-focused system prompt
 
 from groq import Groq
 from dotenv import load_dotenv
@@ -9,7 +9,7 @@ from typing import List, Dict, Optional
 
 load_dotenv()
 
-# Initialize the OpenAI client
+# Initialize the groqAI client
 client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 MODEL = "llama-3.3-70b-versatile"
 
@@ -71,7 +71,7 @@ IMMEDIATELY:
 1. Acknowledge their pain with compassion
 2. Gently but clearly encourage them to reach out to:
    - A trusted person (friend, family, counselor)
-   - Crisis resources: National Crisis Hotline 988 (US)
+   - Crisis resources: National Crisis Hotline 112 
    - Their university's counseling center
 3. Do NOT try to handle a mental health crisis yourself
 4. Do NOT give detailed psychological advice in a crisis
@@ -182,7 +182,7 @@ async def chat_with_ai(
         return response.choices[0].message.content
         
     except Exception as e:
-        print(f"OpenAI API error: {e}")
+        print(f"groq API error: {e}")
         return (
             "I'm having a little trouble connecting right now. "
             "Please try again in a moment. If you're in distress, "
@@ -197,7 +197,7 @@ def get_crisis_response() -> str:
         "and I'm glad you reached out. What you're feeling matters deeply.\n\n"
         "I'm an AI, which means I'm not equipped to give you the level of support "
         "you deserve right now. Please reach out to someone who can truly be there for you:\n\n"
-        "🆘 **Crisis Hotline:** Call or text **988** (Suicide & Crisis Lifeline, US)\n"
+        "🆘 **Crisis Hotline:** Call or text **112** (Suicide & Crisis Lifeline, US)\n"
         "💙 **Your university's counseling center** — they're there for exactly this\n"
         "🤝 **A trusted person** — a friend, family member, or mentor\n\n"
         "You don't have to carry this alone. Real human support is the most important "
