@@ -8,7 +8,7 @@ from sqlalchemy.sql import func
 from dotenv import load_dotenv
 import os
 import uuid
-from database.connection import Base, engine
+
 load_dotenv()
 
 # Get database URL from environment variables
