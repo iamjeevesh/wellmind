@@ -6,6 +6,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from dotenv import load_dotenv
 import os
+from database import Base, engine
 
 # Load environment variables from .env file
 load_dotenv()
@@ -83,6 +84,8 @@ async def root():
 @app.on_event("startup")
 async def startup_event():
     print("🌿 WellMind API starting up...")
+    Base.metadata.create_all(bind=engine)
+    print("   Database tables verified/created")
     print(f"   Environment: {os.getenv('ENVIRONMENT', 'development')}")
     print(f"   CORS origins: {allowed_origins}")
     print("✅ WellMind API is ready!")
