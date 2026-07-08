@@ -197,11 +197,12 @@ def get_crisis_response() -> str:
         "and I'm glad you reached out. What you're feeling matters deeply.\n\n"
         "I'm an AI, which means I'm not equipped to give you the level of support "
         "you deserve right now. Please reach out to someone who can truly be there for you:\n\n"
-        "🆘 **Crisis Hotline:** Call or text **112** (Suicide & Crisis Lifeline, US)\n"
-        "💙 **Your university's counseling center** — they're there for exactly this\n"
-        "🤝 **A trusted person** — a friend, family member, or mentor\n\n"
+        "🆘 **Emergency:** If you feel you're in immediate danger or might act on these thoughts, call **112**, India's emergency helpline, or go to the nearest hospital emergency department.\n"
+        "💙 **Tele-MANAS Mental Health Helpline:** Call **14416** or **1-800-89-14416** for free mental health support.\n"
+        "🏫 **Your university's counseling center** — they're there to support students.\n"
+        "🤝 **A trusted person** — a friend, family member, teacher, or mentor.\n\n"
         "You don't have to carry this alone. Real human support is the most important "
-        "thing right now. Please reach out to them."
+        "thing right now. Please reach out to someone as soon as you can."
     )
 
 
