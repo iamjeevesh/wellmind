@@ -148,7 +148,7 @@ export default function DashboardPage() {
             Good to see you 🌿
           </h1>
           <p className="text-[var(--text-secondary)] mt-1">
-            {new Date().toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' })}
+            {new Date().toLocaleDateString('en-IN', { weekday: 'long', month: 'long', day: 'numeric' })}
           </p>
         </div>
         {!stats?.today_checked_in && (

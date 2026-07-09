@@ -105,10 +105,10 @@ export default function HomePage() {
         <p className="text-xs text-[var(--text-muted)] max-w-2xl mx-auto">
           ⚠️ <strong>Disclaimer:</strong> WellMind is a wellness and productivity support tool. 
           It is NOT a replacement for licensed medical or psychological care. 
-          If you are experiencing a mental health crisis, please contact a professional or crisis line (988 in the US).
+          If you are experiencing a mental health crisis, please contact iCall at 9152987821 or Vandrevala Foundation at 1860-2662-345 (India).
         </p>
         <p className="text-xs text-[var(--text-muted)] mt-3">
-          © 2024 WellMind • Made with 💚 for students
+          © 2026 WellMind • Made with 💚 for students by Jeevesh Vijayakumar
         </p>
       </footer>
 

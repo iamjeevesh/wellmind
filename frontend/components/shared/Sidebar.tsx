@@ -1,7 +1,7 @@
 'use client'
 // components/shared/Sidebar.tsx
 // Main navigation sidebar
-
+import clsx from 'clsx'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { UserButton } from '@clerk/nextjs'
@@ -31,6 +31,7 @@ const navItems = [
 export function Sidebar() {
   const pathname = usePathname()
   const [dark, setDark] = useState(false)
+  const [mobileOpen, setMobileOpen] = useState(false)
 
   useEffect(() => {
     const saved = localStorage.getItem('theme')
@@ -53,7 +54,28 @@ export function Sidebar() {
   }
 
   return (
-    <aside className="w-64 min-h-screen flex flex-col glass-strong border-r border-[var(--border-subtle)]">
+    <>
+    {/* Mobile overlay — dark background when sidebar is open */}
+    {mobileOpen && (
+      <div
+        className="fixed inset-0 bg-black/50 z-20 lg:hidden"
+        onClick={() => setMobileOpen(false)}
+      />
+    )}
+
+    {/* Hamburger button — only visible on mobile */}
+    <button
+      onClick={() => setMobileOpen(!mobileOpen)}
+      className="lg:hidden fixed top-4 left-4 z-30 glass p-2 rounded-xl"
+    >
+      <span className="text-xl">{mobileOpen ? '✕' : '☰'}</span>
+    </button>
+
+    <aside className={clsx(
+      "w-64 min-h-screen flex flex-col glass-strong border-r border-[var(--border-subtle)]",
+      "fixed lg:relative z-30 transition-transform duration-300",
+      mobileOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"
+    )}>
       
       {/* Logo */}
       <div className="p-6 border-b border-[var(--border-subtle)]">
@@ -112,6 +134,7 @@ export function Sidebar() {
           Not a medical tool. Seek professional help for mental health concerns.
         </p>
       </div>
-    </aside>
+      </aside>
+    </>
   )
 }

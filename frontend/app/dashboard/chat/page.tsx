@@ -259,7 +259,7 @@ export default function ChatPage() {
 
       {/* Safety disclaimer */}
       <p className="text-xs text-[var(--text-muted)] text-center mt-2">
-        Sage is an AI, not a therapist. For mental health crises, call/text 988.
+        Sage is an AI, not a therapist. For mental health crises, call iCall: 9152987821
       </p>
     </div>
   )
