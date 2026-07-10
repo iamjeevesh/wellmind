@@ -1,7 +1,6 @@
 'use client'
 // components/shared/Sidebar.tsx
 // Main navigation sidebar
-import clsx from 'clsx'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { UserButton } from '@clerk/nextjs'
