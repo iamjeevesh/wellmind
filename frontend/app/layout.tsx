@@ -9,8 +9,9 @@ export const metadata: Metadata = {
   title: 'WellMind — Student Wellness',
   description: 'AI-powered wellness and burnout support for students',
   icons: {
-    icon: '/icon.svg',
-    apple: '/icon.svg',
+    icon: '/favicon.ico',
+    shortcut: '/favicon-16x16.png',
+    apple: '/apple-touch-icon.png',
   },
 }
 
